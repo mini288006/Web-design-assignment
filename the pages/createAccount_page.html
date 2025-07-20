@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	background-color: #95D2B3;
+	margin:0;
+	max-width:100%;
+	overflow-x:hidden;
+}
+header {
+	width:100%;
+	z-index: 1000;
+	position:fixed;
+}
+.myheader{
+	width: 100%;
+	display:flex;
+	background-color: #CAF4FF;
+	border-top: solid;
+	border-bottom: solid;
+}
+.logo{
+	border-radius: 100px;
+}
+.slogan{
+	flex: 5;
+	text-align: center;
+	background-color: #91DDCF;
+	//border: 2px solid #CAF4FF;//
+	//border-radius: 10px;//
+	//border-width: medium;//
+	padding: 0px;
+	margin: 0px;
+}
+.login{
+	flex: 1;
+	text-align: center;
+	border: 2px solid #CAF4FF;
+	border-radius: 10px;	
+	padding: 20px;
+	margin: auto;
+}
+.createacc{
+	flex: 1;
+	text-align: center;
+	border: 2px solid #CAF4FF;
+	border-radius: 10px;
+	padding: 20px;
+	margin: auto;
+}
+main{
+	padding-top: 0;
+	width:100%;
+	display:flex;
+}
+a:link{
+	color: #0E46A3;
+}
+.parthold{
+	height: 100px;
+}
+.sidebar{
+	background-color: #55AD9B;
+	margin: 0;
+	padding: 0;
+	overflow-y:auto;
+	height:1000px;
+	width: 200px;
+	position:fixed;
+	height:100%;
+	z-index:1;
+}
+.sidepart{
+	text-align:center;
+	height:100%;
+	display:flex;
+	align-items:center;
+}
+h1.side{
+	font-size:20px;
+	margin:auto;
+}
+li.foot{
+	display: inline-block;
+	text-align: center;
+	width:calc((100% - 200px)/3);
+}
+ul.foot{
+	position:relative;
+	bottom:-15px;
+	padding-left:40px;
+	width:100%;
+}
+footer{
+	z-index: 0;
+	position:relative;
+	background-color: #40A578;
+	height: 50px;
+	width:100%
+}
+.foot a{
+	curser:pointer;
+}
+.dropdown{
+	position: relative;
+	top:-225;
+	left:350;
+	height: 0px;
+	width:500px;
+	display: none;
+	font-size: 20px;
+	color: #5C2FC2;
+}
+.create{
+	flex:4;
+	height:100%
+}
+.title h1{
+	text-align: center;
+}
+.createme{
+	align-items: center;
+	height: 1000px;
+}
+.createme fieldset{
+	border-width: 5px;
+	border-color:black;
+	border-radius:50px;
+}
+legend{
+	text-align: center;
+}
+fieldset{
+	padding: 3%;
+	margin: 2%;
+}
+.createhold{
+	display: flex;
+}
+.createpart{
+	flex:1;
+	position: relative;
+	left:9%;
+}
+
+input{
+	border-radius:50px;
+	padding:5px;
+}
+textarea{
+	border-radius:15px;
+	border-width:2px;
+	padding:5px;
+}
+input.submitme{
+	display:block;
+	margin:auto;
+}
+</style>
+</head>
+
+<body>
+
+<header id = "headerme">
+<!--hr color="#1A2130" width="210%"-->
+<div class="myheader">
+<img class="logo" src="logo.jpg" height="75px" width="100px">
+<div class="slogan">
+<h3>WITH MORE ADVANCED MEDICINE,<br>EXPECT LESS ILLNESS</h3>
+</div>
+<h3 class="login"><a href="login.html">LOG IN</a></h3>
+<h3 class="createacc"><a href="createAccount_page.html">Create Account</a></h3>
+</div>
+<!--hr color="#1A2130" width="210%"-->
+</header>
+<main id = "mainer">
+<div class="sidebar" id = "sidebar">
+<div class="parthold">
+	<div class="sidepart"><h1 class = "side"><a href="home_page.html">Home page</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Drug_list.html">Drug list</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Cart.html">Cart</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Pharmacist.html">Pharmacist</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Settings.html">Settings</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="faq_1.html">FAQ</a></h1></div>
+	</div>
+</div>
+<div class = "create">
+	<div class = "title">
+		<h1>WE WELCOME YOU AS A NEW USER</h1>
+	</div>
+	<div class = "createme" id = "createme">
+		<form>
+			<fieldset>
+			<legend><h3>Input Your Details Here</h3></legend>
+			<div class = "createhold">
+			<div class = "createpart">
+				<b>Email:</b>
+				<input size = 25 type = "email" name = "email" placeholder = "exp@gmail.com" required><br><br>
+				<b>Full Name:</b>
+				<input size = 21 type = "text" name = "name" placeholder = "John Cena" required><br><br>
+				<b>Address(can be changed later):</b><br>
+				<textarea name = "address" cols = 32 rows = 5 placeholder = "No.1, Jalan Medical 1, Taman Bukit Medical, 00000, Medical State"></textarea><br><br>
+				
+			</div>
+			<div class = "createpart">
+				<b>Phone Number:</b>
+				<input type = "tel" name = "phone" placeholder = "012-3456789" pattern = "[0-9]{3}-[0-9]{7,}" required><br><br>
+				<b>Gender:</b>
+				<input type = "radio" id = "M" name = "gender" value = "M" required>
+				<label for = "M">Male</label>
+				<input type = "radio" id = "F" name = "gender" value = "F" required>
+				<label for = "F">Female</label><br><br>
+				<b>Password:</b>
+				<input size = 21 type = "password" name = "password" placeholder = "mypassword" 
+				pattern = ".{8,}" title = "at least 8 characters" required></input><br><br>
+			</div>
+			</div>
+			<input class = "submitme" type = "submit" name = "Submit">
+			</fieldset>
+		</form>
+	</div>
+</div>
+</main>
+<footer id = "footer">
+<ul class = "foot">
+	<li class = "foot"><a href="certificate.html">Certificate</a></li>
+	<li class = "foot"><a href="About_us.html">About Us</a></li>
+</ul>
+</footer>
+<script>
+var headerh = document.getElementById("headerme").offsetHeight;
+var winh = window.innerHeight;
+var sideh = winh - headerh;
+var sidew = document.getElementById("sidebar").offsetWidth;
+document.getElementById("mainer").style.paddingTop = headerh + "px";
+document.getElementById("createme").style.paddingLeft = sidew + "px";
+document.getElementById("sidebar").style.height = sideh + "px";
+document.getElementById("footer").style.paddingLeft = sidew + "px";
+
+</script>
+</body>
+</html>

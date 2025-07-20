@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	background-color: #95D2B3;
+	margin:0;
+	max-width:100%;
+	overflow-x:hidden;
+}
+header {
+	width:100%;
+	z-index: 1000;
+	position:fixed;
+}
+.myheader{
+	width: 100%;
+	display:flex;
+	background-color: #CAF4FF;
+	border-top: solid;
+	border-bottom: solid;
+}
+.logo{
+	border-radius: 100px;
+}
+.slogan{
+	flex: 5;
+	text-align: center;
+	background-color: #91DDCF;
+	//border: 2px solid #CAF4FF;//
+	//border-radius: 10px;//
+	//border-width: medium;//
+	padding: 0px;
+	margin: 0px;
+}
+.login{
+	flex: 1;
+	text-align: center;
+	border: 2px solid #CAF4FF;
+	border-radius: 10px;	
+	padding: 20px;
+	margin: auto;
+}
+.createacc{
+	flex: 1;
+	text-align: center;
+	border: 2px solid #CAF4FF;
+	border-radius: 10px;
+	padding: 20px;
+	margin: auto;
+}
+main{
+	padding-top: 0;
+	width:100%;
+	display:flex;
+}
+a:link{
+	color: #0E46A3;
+}
+.parthold{
+	height: 100px;
+}
+.sidebar{
+	background-color: #55AD9B;
+	margin: 0;
+	padding: 0;
+	overflow-y:auto;
+	height:1000px;
+	width: 200px;
+	position:fixed;
+	height:100%;
+	z-index:1;
+}
+.sidepart{
+	text-align:center;
+	height:100%;
+	display:flex;
+	align-items:center;
+}
+h1.side{
+	font-size:20px;
+	margin:auto;
+}
+li.foot{
+	display: inline-block;
+	text-align: center;
+	width:calc((100% - 200px)/2);
+}
+ul.foot{
+	position:relative;
+	bottom:-15px;
+	padding-left:40px;
+	width:100%;
+}
+footer{
+	z-index: 0;
+	position:relative;
+	background-color: #40A578;
+	height: 50px;
+	width:100%
+}
+.foot a{
+	curser:pointer;
+}
+
+.start{
+	flex:4;
+	align-items: center;
+	height: 1400px;
+	text-align:center;
+}
+.mainpart{
+	height: 100%;
+}
+.cart h1{
+	text-align: center;
+}
+.cat{
+	display: flex;
+	align-items:center;
+	background-color:orange;
+	border-collapse:collapse;
+	border:solid;
+	margin:10px;
+	border-radius:100px;
+}
+.cat h3{
+	flex:1;
+	text-align: center;
+}
+.added{
+	display: flex;
+	height: 200px;
+	align-items: center;
+}
+.buff{
+	flex: 5;
+}
+.hab{
+	flex: 2;
+}
+</style>
+</head>
+
+<body>
+
+<header id = "headerme">
+<!--hr color="#1A2130" width="210%"-->
+<div class="myheader">
+<img class="logo" src="logo.jpg" height="75px" width="100px">
+<div class="slogan">
+<h3>WITH MORE ADVANCED MEDICINE,<br>EXPECT LESS ILLNESS</h3>
+</div>
+<h3 class="login"><a href="login.html">LOG IN</a></h3>
+<h3 class="createacc"><a href="createAccount_page.html">Create Account</a></h3>
+</div>
+<!--hr color="#1A2130" width="210%"-->
+</header>
+<main id = "mainer">
+<div class="sidebar" id = "sidebar">
+<div class="parthold">
+	<div class="sidepart"><h1 class = "side"><a href="home_page.html">Home page</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Drug_list.html">Drug list</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Cart.html">Cart</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Pharmacist.html">Pharmacist</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Settings.html">Settings</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="faq_1.html">FAQ</a></h1></div>
+	</div>
+</div>
+<div class = "start" id = "start">
+	<div class = "pending">
+	<h1>Pending Purchase In Current Cart</h1>
+		<div class = "added" id = "levothyroxine">
+		<div class = "buff"></div>
+		<image class = "hab" src="med5.webp" width="100px" height="100px">
+		<div class = "hab" id = "det">Name: Levothyroxine<br>quantity: </div>
+		<div class = "hab">
+		<button onclick = "changeprice('levothyroxine')">change quantity</button><br><br>
+		<button onclick = "removeme('levothyroxine')">remove from cart</button>
+		</div>
+		<div class = "buff"></div>
+		</div>
+		<div class = "added" id = 'vitamin d'>
+		<div class = "buff"></div>
+		<image class = "hab" src="med6.webp" width="100px" height="100px">
+		<div class = "hab" id = "det">Name: Vitamin D<br>quantity: </div>
+		<div class = "hab">
+		<button onclick = "changeprice('vitamin d')">change quantity</button><br><br>
+		<button onclick = "removeme('vitamin d')">remove from cart</button>
+		</div>
+		<div class = "buff"></div>
+		</div>
+		<div class = "added" id = 'amoxicillin'>
+		<div class = "buff"></div>
+		<image class = "hab" src="med7.webp" width="100px" height="100px">
+		<div class = "hab" id = "det">Name: Amoxicillin<br>quantity: </div>
+		<div class = "hab">
+		<button onclick = "changeprice('amoxicillin')">change quantity</button><br><br>
+		<button onclick = "removeme('amoxicillin')">remove from cart</button>
+		</div>
+		<div class = "buff"></div>
+		</div>
+		<div class = "added" id = 'lisinopril'>
+		<div class = "buff"></div>
+		<image class = "hab" src="med8.webp" width="100px" height="100px">
+		<div class = "hab" id = "det">Name: Lisinopril<br>quantity: </div>
+		<div class = "hab">
+		<button onclick = "changeprice('lisinopril')">change quantity</button><br><br>
+		<button onclick = "removeme('lisinopril')">remove from cart</button>
+		</div>
+		<div class = "buff"></div>
+		</div>
+		<div class = "added" id = 'dextroamphetamine'>
+		<div class = "buff"></div>
+		<image class = "hab" src="med9.webp" width="100px" height="100px">
+		<div class = "hab" id = "det">Name: Dextroamphetamine<br>quantity: </div>
+		<div class = "hab">
+		<button onclick = "changeprice('dextroamphetamine')">change quantity</button><br><br>
+		<button onclick = "removeme('dextroamphetamine')">remove from cart</button>
+		</div>
+		<div class = "buff"></div>
+		</div>
+		<div class = "added" id = 'amlodipine'>
+		<div class = "buff"></div>
+		<image class = "hab" src="med10.webp" width="100px" height="100px">
+		<div class = "hab" id = "det">Name: Amlodipine<br>quantity: </div>
+		<div class = "hab">
+		<button onclick = "changeprice('amlodipine')">change quantity</button><br><br>
+		<button onclick = "removeme('amlodipine')">remove from cart</button>
+		</div>
+		<div class = "buff"></div>
+		</div>
+		<div class = "added" id = 'gabapentin'>
+		<div class = "buff"></div>
+		<image class = "hab" src="med11.webp" width="100px" height="100px">
+		<div class = "hab" id = "det">Name: Gabapentin<br>quantity: </div>
+		<div class = "hab">
+		<button onclick = "changeprice('gabapentin')">change quantity</button><br><br>
+		<button onclick = "removeme('gabapentin')">remove from cart</button>
+		</div>
+		<div class = "buff"></div>
+		</div>
+		<div class = "added" id = 'atorvastatin'>
+		<div class = "buff"></div>
+		<image class = "hab" src="med12.avif" width="100px" height="100px">
+		<div class = "hab" id = "det">Name: Atorvastatin<br>quantity: </div>
+		<div class = "hab">
+		<button onclick = "changeprice('atorvastatin')">change quantity</button><br><br>
+		<button onclick = "removeme('atorvastatin')">remove from cart</button>
+		</div>
+		<div class = "buff"></div>
+		</div>
+		<div class = "added" id = 'prednisone'>
+		<div class = "buff"></div>
+		<image class = "hab" src="med13.webp" width="100px" height="100px">
+		<div class = "hab" id = "det">Name: Prednisone<br>quantity: </div>
+		<div class = "hab">
+		<button onclick = "changeprice('prednisone')">change quantity</button><br><br>
+		<button onclick = "removeme('prednisone')">remove from cart</button>
+		</div>
+		<div class = "buff"></div>
+		</div>
+		<div class = "added" id = 'albuterol hfa'>
+		<div class = "buff"></div>
+		<image class = "hab" src="med14.avif" width="100px" height="100px">
+		<div class = "hab" id = "det">Name: Albuterol HFA<br>quantity: </div>
+		<div class = "hab">
+		<button onclick = "changeprice('albuterol hfa')">change quantity</button><br><br>
+		<button onclick = "removeme('albuterol hfa')">remove from cart</button>
+		</div>
+		<div class = "buff"></div>
+		</div>
+	</div>
+	<h1 id = "totalp">Total Price: </h1>
+	<button onclick = "buyitems()">purchase</button>
+	<button onclick = "clearcart()"><b>clear cart</b></button>
+	<hr color = "black">
+	<div id = "purchaserecord">
+	<h1>Previous Purchases</h1>
+	<button onclick = "clearhistory()">clear history</button>
+		<div class = "cat">
+		<h3></h3>
+		<h3>Purchase Items</h3>
+		<h3>Total Price</h3>
+		<h3>Puchase ID</h3>
+		<h3></h3>
+		</div>
+	</div>
+</div>
+</main>
+<footer id = "footer">
+<ul class = "foot">
+	<li class = "foot"><a href="certificate.html">Certificate</a></li>
+	<li class = "foot"><a href="about_us.html">About Us</a></li>
+</ul>
+</footer>
+<script>
+var headerh = document.getElementById("headerme").offsetHeight;
+var winh = window.innerHeight;
+var sideh = winh - headerh;
+var sidew = document.getElementById("sidebar").offsetWidth;
+document.getElementById("mainer").style.paddingTop = headerh + "px";
+document.getElementById("start").style.paddingLeft = sidew + "px";
+document.getElementById("sidebar").style.height = sideh + "px";
+document.getElementById("footer").style.paddingLeft = sidew + "px";
+const drugs = ["levothyroxine", 'vitamin d', 'amoxicillin', 'lisinopril', 'dextroamphetamine', 'amlodipine', 'gabapentin', 'atorvastatin', 'prednisone', 'albuterol hfa']
+const price = [7,7,5,5,10,10,8,8,8,5];
+var count = -1;
+var curr, storeme;
+var test;
+var curprice, totalprice = 0;
+var drugstore;
+while (drugs[++count])
+{
+	curr = document.getElementById(drugs[count]);
+	test = curr.querySelector("#det");
+	if (localStorage.getItem(drugs[count]) == null)
+	{
+		curr.style.display = 'none';
+	}
+	else
+	{
+		curprice = Number(localStorage.getItem(drugs[count])) * Number(price[count]);
+		test.innerHTML += localStorage.getItem(drugs[count]);
+		test.innerHTML += "<br><br>Total price: <b>RM" + curprice + "</b><br>(" + localStorage.getItem(drugs[count]) + ' * RM' + price[count]+')';
+		totalprice += curprice;
+	}
+}
+document.getElementById('totalp').innerHTML += 'RM'+totalprice;
+function changeprice(item)
+{
+	curr = Number(prompt('change current product quantity to?'));
+	if (curr === 0 || curr !== curr){
+		alert('failed when adding to cart');
+	}
+	else{
+		localStorage.setItem(item, curr);
+		location.reload();
+	}
+}
+
+function removeme(item)
+{
+	if (confirm('are you sure you want to remove this product')){
+		localStorage.removeItem(item);
+		location.reload();
+	}
+	else{
+		alert('cancelled');
+	}
+}
+function clearcart()
+{
+	if (confirm('are you sure you want to remove all products')){
+		count =  -1;
+		while (drugs[++count])
+		{
+			localStorage.removeItem(drugs[count]);
+		}
+		alert('all products cleared from cart');
+		location.reload();
+	}
+	else{
+		alert('cancelled');
+	}
+}
+function buyitems()
+{
+	if (totalprice !== 0 && confirm('are you sure you want to purchase these products')){
+		if (localStorage.getItem("buyid") == null){
+			localStorage.setItem("buyid", Number(101));
+		}
+		else{
+			localStorage.setItem("buyid",Number(localStorage.getItem("buyid")) + 1);
+		}
+		count =  -1;
+		drugstore = '';
+		while (drugs[++count])
+		{
+			if (localStorage.getItem(drugs[count]) !== null)
+			{
+				drugstore += drugs[count] + "<br>x" + localStorage.getItem(drugs[count]) + "<br>";
+			}
+		}
+		storeme = { purchaseid: localStorage.getItem("buyid"), totalp: totalprice, alldrugs: drugstore};
+		localStorage.setItem('idofbuy' + localStorage.getItem("buyid"), JSON.stringify(storeme));
+		count =  -1;
+		while (drugs[++count])
+		{
+			localStorage.removeItem(drugs[count]);
+		}
+		alert('purchase successful');
+	}
+	else{
+		alert('failed to purchase(nothing to buy or cancelled)');
+	}
+	location.reload();
+}
+var startingid = 100;
+while (++startingid <= localStorage.getItem('buyid')){
+	if (localStorage.getItem('idofbuy'+ startingid) != null){
+		const addinto = document.getElementById("purchaserecord");
+		var hold = document.createElement("div");
+		hold.setAttribute('class', 'cat');
+		var count2 = 0;
+		var created;
+		while(++count2 <= 5)
+		{
+			created = document.createElement("h3");
+			if (count2 == 2)
+			{
+				created.innerHTML = JSON.parse(localStorage.getItem('idofbuy'+ startingid)).alldrugs;
+			}
+			else if (count2 == 3)
+			{
+				created.innerHTML = "RM"+JSON.parse(localStorage.getItem('idofbuy'+ startingid)).totalp;
+			}
+			else if (count2 == 4)
+			{
+				created.innerHTML = JSON.parse(localStorage.getItem('idofbuy'+ startingid)).purchaseid;
+			}
+			hold.appendChild(created);
+			addinto.appendChild(hold);
+		}
+	}
+}
+function clearhistory()
+{
+	startingid = 100;
+	if (confirm('are you sure you want to clear purchase history')){
+		while (++startingid <= localStorage.getItem('buyid') && localStorage.getItem('buyid') !== null){
+			localStorage.removeItem('idofbuy'+ startingid);
+		}
+		alert('clear complete');
+	}
+	else
+	{
+		alert('cancelled');
+	}
+	location.reload();
+}
+</script>
+</body>
+</html>

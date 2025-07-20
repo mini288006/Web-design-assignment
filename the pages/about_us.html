@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	background-color: #95D2B3;
+	margin:0;
+	max-width:100%;
+	overflow-x:hidden;
+}
+header {
+	width:100%;
+	z-index: 1000;
+	position:fixed;
+}
+.myheader{
+	width: 100%;
+	display:flex;
+	background-color: #CAF4FF;
+	border-top: solid;
+	border-bottom: solid;
+}
+.logo{
+	border-radius: 100px;
+}
+.slogan{
+	flex: 5;
+	text-align: center;
+	background-color: #91DDCF;
+	//border: 2px solid #CAF4FF;//
+	//border-radius: 10px;//
+	//border-width: medium;//
+	padding: 0px;
+	margin: 0px;
+}
+.login{
+	flex: 1;
+	text-align: center;
+	border: 2px solid #CAF4FF;
+	border-radius: 10px;	
+	padding: 20px;
+	margin: auto;
+}
+.createacc{
+	flex: 1;
+	text-align: center;
+	border: 2px solid #CAF4FF;
+	border-radius: 10px;
+	padding: 20px;
+	margin: auto;
+}
+main{
+	padding-top: 0;
+	width:100%;
+	display:flex;
+}
+a:link{
+	color: #0E46A3;
+}
+.parthold{
+	height: 100px;
+}
+.sidebar{
+	background-color: #55AD9B;
+	margin: 0;
+	padding: 0;
+	overflow-y:auto;
+	height:1000px;
+	width: 200px;
+	position:fixed;
+	height:100%;
+	z-index:1;
+}
+.sidepart{
+	text-align:center;
+	height:100%;
+	display:flex;
+	align-items:center;
+}
+h1.side{
+	font-size:20px;
+	margin:auto;
+}
+li.foot{
+	display: inline-block;
+	text-align: center;
+	width:calc((100% - 200px)/3);
+}
+ul.foot{
+	position:relative;
+	bottom:-15px;
+	padding-left:40px;
+	width:100%;
+}
+footer{
+	z-index: 0;
+	position:relative;
+	background-color: #40A578;
+	height: 50px;
+	width:100%
+}
+.foot a{
+	curser:pointer;
+}
+.dropdown{
+	position: relative;
+	top:-225;
+	left:350;
+	height: 0px;
+	width:500px;
+	display: none;
+	font-size: 20px;
+	color: #5C2FC2;
+}
+.name{
+	flex:4;
+	height:1000px;
+	align-items: center;
+	height: 2600px;
+	text-align:center;
+	font-size: 50px;
+}
+.mainpart{
+	height: 100%;
+}
+.desc{
+	font-size:20px;
+	border: solid;
+}
+.desc1{
+	font-size:20px;
+	border: solid;
+}
+.desc2{
+	font-size:20px;
+	border: solid;
+}
+.desc3{
+	font-size:20px;
+	border: solid;
+}
+.desc4{
+	font-size:20px;
+	border: solid;
+}
+.desc5{
+	font-size:20px;
+	border: solid;
+}
+</style>
+</head>
+
+<body>
+
+<header id = "headerme">
+<!--hr color="#1A2130" width="210%"-->
+<div class="myheader">
+<img class="logo" src="logo.jpg" height="75px" width="100px">
+<div class="slogan">
+<h3>WITH MORE ADVANCED MEDICINE,<br>EXPECT LESS ILLNESS</h3>
+</div>
+<h3 class="login"><a href="login.html">LOG IN</a></h3>
+<h3 class="createacc"><a href="createAccount_page.html">Create Account</a></h3>
+</div>
+<!--hr color="#1A2130" width="210%"-->
+</header>
+<main id = "mainer">
+<div class="sidebar" id = "sidebar">
+<div class="parthold">
+	<div class="sidepart"><h1 class = "side"><a href="home_page.html">Home page</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Drug_list.html">Drug list</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Cart.html">Cart</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Pharmacist.html">Pharmacist</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Settings.html">Settings</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="faq_1.html">FAQ</a></h1></div>
+	</div>
+</div>
+<div class = "name" id = "mainpart">
+	Tham Dexmund
+	<div class="desc">
+	Our leader in this project, he has achieved high level of 
+	success in his studies including the most important which is Information Technology -
+	his best success. He graduated with a masters in IT and wanted to expand his skills in 
+	making it useful for everyone around the world.<br><br>
+	Contact no:013-8328142
+	</div>
+	Liew Darren
+	<div class="desc1">
+	Co-founder of this website,he has the experience in IT of 13 years,
+	he graduated Harvard University with a masters. He is naturally a curious 
+	person so what he wanted to do is test out his skills. He is such ambitious
+	person so he wanted to test his skills by making something he has never tried before.
+	He is putting his knowledge and skills in good use so he partnered with Mr Tham and made this 
+	website to help others around him with ease.<br><br>
+	contact no:019-2453251
+	</div>
+	Jeff Bazos
+	<div class="desc2">
+	Graduated from Amazon Med school with a Bachelor Degree in Pharmacy 
+	and has very good knowledge in medicine and when it should be used<br><br>
+	Contact no: 012-9876543
+	</div>
+	Thila
+	<div class="desc3">
+	Graduated from 42 Med school with a Masters Degree in Pharmacy 
+	and is always seeking new medicine for patients to ingest 
+	in order to make a hasty recovery<br><br>
+	Contact no: 012-3456789
+	</div>
+	John Doe
+	<div class="desc4">
+	Graduated from Blank Med school with a Bachelor Degree in Pharmacy 
+	and is friendly to all of his patients in order to allow patients 
+	to comfortably approach him for medical advice<br><br>
+	Contact no: 012-8572646
+	</div>
+	Samuel Jackson
+	<div class="desc5">
+	Graduated from Purple Med school with a Bachelor Degree in Pharmacy 
+	and the tendency to be brutally honest about your current health condition and
+	direct ways to make a recovery<br><br>
+	Contact no: 013-6284637
+	</div>
+</div>
+
+</main>
+<footer id = "footer">
+<ul class = "foot">
+	<li class = "foot"><a href="certificate.html">Certificate</a></li>
+	<li class = "foot"><a href="about_us.html">About Us</a></li>
+</ul>
+</footer>
+<script>
+var headerh = document.getElementById("headerme").offsetHeight;
+var winh = window.innerHeight;
+var sideh = winh - headerh;
+var sidew = document.getElementById("sidebar").offsetWidth;
+document.getElementById("mainer").style.paddingTop = headerh + "px";
+document.getElementById("mainpart").style.paddingLeft = sidew + "px";
+document.getElementById("sidebar").style.height = sideh + "px";
+document.getElementById("footer").style.paddingLeft = sidew + "px";
+</script>
+</body>
+</html>

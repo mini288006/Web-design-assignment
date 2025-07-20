@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	background-color: #95D2B3;
+	margin:0;
+	max-width:100%;
+	overflow-x:hidden;
+}
+header {
+	position: fixed;
+	width:100%;
+	z-index: 1000;
+}
+.myheader{
+	width: 100%;
+	display:flex;
+	background-color: #CAF4FF;
+	border-top: solid;
+	border-bottom: solid;
+}
+.logo{
+	border-radius: 100px;
+}
+.slogan{
+	flex: 5;
+	text-align: center;
+	background-color: #91DDCF;
+	//border: 2px solid #CAF4FF;//
+	//border-radius: 10px;//
+	//border-width: medium;//
+	padding: 0px;
+	margin: 0px;
+}
+.login{
+	flex: 1;
+	text-align: center;
+	border: 2px solid #CAF4FF;
+	border-radius: 10px;	
+	padding: 20px;
+	margin: auto;
+}
+.createacc{
+	flex: 1;
+	text-align: center;
+	border: 2px solid #CAF4FF;
+	border-radius: 10px;
+	padding: 20px;
+	margin: auto;
+}
+main{
+	height: 1000px;
+	width:100%;
+}
+a:link{
+	color: #0E46A3;
+}
+.parthold{
+	height: 100px;
+}
+.sidebar{
+	width: 200px;
+	background-color: #55AD9B;
+	position: fixed;
+	top: 85.5px;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display:flex;
+	flex-wrap:wrap;
+	overflow-y:auto;	
+}
+.sidepart{
+	z-index:111;
+	flex: 1;
+	text-align:center;
+	width:200px;
+	height:100%;
+}
+h1.side{
+	font-size:20px;
+}
+li.foot{
+	display: inline-block;
+	text-align: center;
+	width:calc((100% - 200px)/3);
+}
+ul.foot{
+	position:relative;
+	bottom:-15px;
+	padding-left:40px;
+	width:100%;
+}
+footer{
+	position:relative;
+	left:200px; 
+	background-color: #40A578;
+	height: 50px;
+	width:100%
+}
+
+.dropdown{
+	position: relative;
+	top:-225;
+	left:350;
+	height: 0px;
+	width:500px;
+	display: none;
+	font-size: 20px;
+	color: #5C2FC2;
+}
+.pay{
+	width:calc(100% - 200px);
+	position:absolute;
+	top:100px;
+	left:200px;
+	height:100%
+}
+.pay h1{
+	text-align:center;
+}
+
+.payoptions{
+	display: flex;
+}
+.sep{
+	flex: 1;
+	text-align:center;
+}
+.opt:hover{
+	background-color: #85B79D;
+}
+.but{
+	border:none;
+	background-color:transparent;
+	padding:0;
+	cursor: pointer;
+}
+.opt{
+	cursor: pointer;
+	padding:10px;
+}
+.tog{
+	background-color: #85B79D;
+}
+.noshow{
+	display: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<!--hr color="#1A2130" width="210%"-->
+<div class="myheader">
+<img class="logo" src="logo.jpg" height="75px" width="100px">
+<div class="slogan">
+<h3>WITH MORE ADVANCED MEDICINE,<br>EXPECT LESS ILLNESS</h3>
+</div>
+<h3 class="login"><a href="login_page.html">LOG IN</a></h3>
+<h3 class="createacc"><a href="createAccount_page.html">Create Account</a></h3>
+</div>
+<!--hr color="#1A2130" width="210%"-->
+</header>
+
+<main>
+<div class="sidebar">
+<div class="parthold">
+	<div class="sidepart"><h1 class = "side"><a href="home_page.html">Home page</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Drug_list.html">Drug list</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Cart.html">Cart</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Pharmacist.html">Pharmacist</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Settings.html">Settings</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="FAQ.html">FAQ</a></h1></div>
+	</div>
+</div>
+<div class = "pay">
+	<div class = "payoptions">
+		<div class = "sep">
+		<h1>payment option</h1>
+		<div class = "opt but" id = "but1" onclick = "highlight('but1'),showdet('det1')"><h2>Credit Card</h2></div>
+		<div class = "opt but" id = "but2" onclick = "highlight('but2'),showdet('det2')"><h2>Debit Card</h2></div>
+		<div class = "opt but" id = "but3" onclick = "highlight('but3'),showdet('det3')"><h2>Bank Transfer</h2></div>
+		<div class = "opt but" id = "but4" onclick = "highlight('but4'),showdet('det4')"><h2>Touch n Go E-wallet</h2></div>
+		</div>
+		
+		<div class = "sep">
+		<h1>payment details</h1>
+		<div class = "noshow" id = "det1"><h2>testing1</h2></div>
+		<div class = "noshow" id = "det2"><h2>testing2</h2></div>
+		<div class = "noshow" id = "det3"><h2>testing3</h2></div>
+		<div class = "noshow" id = "det4"><h2>testing4</h2></div>
+		</div>
+	<div>
+</div>
+<script>
+function showdet(current){
+var but1 = document.getElementById("det1");
+var but2 = document.getElementById("det2");
+var but3 = document.getElementById("det3");
+var but4 = document.getElementById("det4");
+var cur = document.getElementById(current);
+
+but1.classList.add("noshow");
+but2.classList.add("noshow");
+but3.classList.add("noshow");
+but4.classList.add("noshow");
+cur.classList.toggle("noshow");
+}
+function highlight(current){
+var but1 = document.getElementById("but1");
+var but2 = document.getElementById("but2");
+var but3 = document.getElementById("but3");
+var but4 = document.getElementById("but4");
+var cur = document.getElementById(current);
+
+but1.classList.remove("tog");
+but2.classList.remove("tog");
+but3.classList.remove("tog");
+but4.classList.remove("tog");
+cur.classList.toggle("tog");
+}
+</script>
+</main>
+
+<footer>
+<ul class = "foot">
+	<li class = "foot"><a href="spon_page.html">Sponsor</a></li>
+	<li class = "foot"><a href="cert_page.html">Certificate</a></li>
+	<li class = "foot"><a href="About_page.html">About Us</a></li>
+</ul>
+</footer>
+</body>
+</html>

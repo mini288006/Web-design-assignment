@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	background-color: #95D2B3;
+	margin:0;
+	max-width:100%;
+	overflow-x:hidden;
+}
+header {
+	position: fixed;
+	width:100%;
+	z-index: 1000;
+}
+.myheader{
+	width: 100%;
+	display:flex;
+	background-color: #CAF4FF;
+	border-top: solid;
+	border-bottom: solid;
+}
+.logo{
+	border-radius: 100px;
+}
+.slogan{
+	flex: 5;
+	text-align: center;
+	background-color: #91DDCF;
+	//border: 2px solid #CAF4FF;//
+	//border-radius: 10px;//
+	//border-width: medium;//
+	padding: 0px;
+	margin: 0px;
+}
+.login{
+	flex: 1;
+	text-align: center;
+	border: 2px solid #CAF4FF;
+	border-radius: 10px;	
+	padding: 20px;
+	margin: auto;
+}
+.createacc{
+	flex: 1;
+	text-align: center;
+	border: 2px solid #CAF4FF;
+	border-radius: 10px;
+	padding: 20px;
+	margin: auto;
+}
+main{
+	height: 1000px;
+	width:100%;
+}
+a:link{
+	color: #0E46A3;
+}
+.parthold{
+	height: 100px;
+}
+.sidebar{
+	width: 200px;
+	background-color: #55AD9B;
+	position: fixed;
+	top: 85.5;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	display:flex;
+	flex-wrap:wrap;
+	overflow-y:auto;	
+}
+.sidepart{
+	z-index:111;
+	flex: 1;
+	text-align:center;
+	width:200px;
+	height:100%;
+}
+li.foot{
+	display: inline-block;
+	text-align: center;
+	width:318px;
+}
+ul.foot{
+	position:relative;
+	bottom:-15px;
+	padding-left:40px;
+	width:100%;
+}
+footer{
+	position:relative;
+	left:200px; 
+	background-color: #40A578;
+	height: 50px;
+	width:100%
+}
+h1{	
+	font-size:20px;
+}
+
+.dropdown{
+	position: relative;
+	top:-225;
+	left:350;
+	height: 0px;
+	width:500px;
+	display: none;
+	font-size: 20px;
+	color: #5C2FC2;
+}
+.faq{
+	width:calc(100% - 200px);
+	position:absolute;
+	top:100px;
+	left:200px;
+	height:100%;
+}
+.title{
+	text-align:center;
+	font-size: 30px;
+}
+.cathold{
+	height:10%;
+	display: flex;
+}
+.cat:hover{
+	background-color:#85B79D;
+}
+.button{
+	flex:1;
+	cursor: pointer;
+	border:none;
+	background-color:transparent;
+	padding:0;
+	width:100%;
+}
+.cathold .button{
+	font-size:50px;
+}
+.tog{
+	background-color:#85B79D;
+}
+.def{
+	display:none;
+}
+.quesshow{
+	font-size:35px;
+	background-color: #869D7A;
+}
+.noshow{
+	display: none;
+}
+h1.title{
+	text-align: center;
+
+}
+h1.side{
+	font-size:20px;
+}
+.help{
+	margin-left:auto;
+	margin-right:auto;
+	display: block;
+}
+.note{
+	text-align: center;
+}
+.sub{
+	margin-left:auto;
+	margin-right:auto;
+	display: block;
+	width: 100px;
+	height:40px;
+	border-radius: 100px;
+	cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<!--hr color="#1A2130" width="210%"-->
+<div class="myheader">
+<img class="logo" src="logo.jpg" height="75px" width="100px">
+<div class="slogan">
+<h3>WITH MORE ADVANCED MEDICINE,<br>EXPECT LESS ILLNESS</h3>
+</div>
+<h3 class="login"><a href="login.html">LOG IN</a></h3>
+<h3 class="createacc"><a href="createAccount_page.html">Create Account</a></h3>
+</div>
+<!--hr color="#1A2130" width="210%"-->
+</header>
+
+<main>
+<div class="sidebar">
+<div class="parthold">
+	<div class="sidepart"><h1><a href="home_page.html">Home page</a></h1></div>
+	<div class="sidepart"><h1><a href="Drug_list.html">Drug list</a></h1></div>
+	<div class="sidepart"><h1><a href="Cart.html">Cart</a></h1></div>
+	<div class="sidepart"><h1><a href="Pharmacist.html">Pharmacist</a></h1></div>
+	<div class="sidepart"><h1><a href="Settings.html">Settings</a></h1></div>
+	<div class="sidepart"><h1><a href="faq_1.html">FAQ</a></h1></div>
+	</div>
+</div>
+<div class = "faq">
+<h1 class = "title">Freaquently Asked Questions (FAQ)</h1>
+<div class = "cathold">
+<button onclick = "testing('but'),showques('ques1')" id = "but" class="button cat">medicine</button>
+<button onclick = "testing('but2'),showques('ques2')" id = "but2" class="button cat">Pharmacist</button>
+<button onclick = "testing('but3'),showques('ques3')" id = "but3" class="button cat">Delivery</button>
+<button onclick = "testing('but4'),showques('ques4')" id = "but4" class="button cat">Price</button>
+</div>
+<div class = "queshold">
+	<div id = "ques1" class = "quesshow noshow">How long will I have to take it?<br><br>
+	A pill is usually absorbed into the blood through the stomach walls after 
+	it is swallowed – these can become active in a few minutes but usually take 
+	an hour or two to reach the highest concentration in the blood. IV drugs 
+	are injected directly into the blood work much faster – 
+	sometimes in seconds or minutes.
+	</div>
+	<div id = "ques2" class = "quesshow noshow">Why Are Pharmacists Important?<br><br>
+	Within the healthcare system, pharmacists are the medicines experts. Their 
+	valuable knowledge of how medicines work and how they should be used make 
+	them vital members of health care teams.
+	</div>
+	<div id = "ques3" class = "quesshow noshow">How long does it take for my medical supply to reach?<br><br>
+	Usually we first contact the nearest pharmacy near you and we try to get a 
+	response from them. After that we will get the product from them and deliver 
+	them to you as soon as possible 
+	</div>
+	<div id = "ques4" class = "quesshow noshow">Why are some products expensive than usual?<br><br>
+	The reason why some products are more expensive than the original is because
+	we included the price for delivery and some pharmacy sell the products more 
+	expensive than the other ones but we try to pick the cheapest price of them all.
+	</div>
+</div>
+
+<script>
+function showques(current){
+var but = document.getElementById("ques1");
+var but2 = document.getElementById("ques2");
+var but3 = document.getElementById("ques3");
+var but4 = document.getElementById("ques4");
+var cur = document.getElementById(current);
+
+but.classList.add("noshow");
+but2.classList.add("noshow");
+but3.classList.add("noshow");
+but4.classList.add("noshow");
+cur.classList.toggle("noshow");
+}
+function testing(current){
+var but = document.getElementById("but");
+var but2 = document.getElementById("but2");
+var but3 = document.getElementById("but3");
+var but4 = document.getElementById("but4");
+var cur = document.getElementById(current);
+
+but.classList.remove("tog");
+but2.classList.remove("tog");
+but3.classList.remove("tog");
+but4.classList.remove("tog");
+cur.classList.toggle("tog");
+}
+</script>
+<div>
+<h1 class = "title">Request Assitance</h1>
+<form>
+<textarea class = "help" name="help" rows = 20% cols = 100% placeholder = "type any other questions you have..."></textarea>
+<h3 class = "note">We will send an email given by you in account setting regarding your issue within 3-5 business days.<br>Thank you for your cooperation.</h3>
+<input class = "sub" type = "submit" name = "Submit" value = "submit">
+</form>
+
+</div>
+</div>
+
+
+</main>
+
+<footer>
+<ul class = "foot">
+	<li class = "foot"><a href="certificate.html">Certificate</a></li>
+	<li class = "foot"><a href="about_us.html">About Us</a></li>
+</ul>
+</footer>
+</body>
+</html>

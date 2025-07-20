@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	background-color: #95D2B3;
+	margin:0;
+	max-width:100%;
+	overflow-x:hidden;
+}
+header {
+	width:100%;
+	z-index: 1000;
+	position:fixed;
+}
+.myheader{
+	width: 100%;
+	display:flex;
+	background-color: #CAF4FF;
+	border-top: solid;
+	border-bottom: solid;
+}
+.logo{
+	border-radius: 100px;
+}
+.slogan{
+	flex: 5;
+	text-align: center;
+	background-color: #91DDCF;
+	//border: 2px solid #CAF4FF;//
+	//border-radius: 10px;//
+	//border-width: medium;//
+	padding: 0px;
+	margin: 0px;
+}
+.login{
+	flex: 1;
+	text-align: center;
+	border: 2px solid #CAF4FF;
+	border-radius: 10px;	
+	padding: 20px;
+	margin: auto;
+}
+.createacc{
+	flex: 1;
+	text-align: center;
+	border: 2px solid #CAF4FF;
+	border-radius: 10px;
+	padding: 20px;
+	margin: auto;
+}
+main{
+	padding-top: 0;
+	width:100%;
+	display:flex;
+}
+a:link{
+	color: #0E46A3;
+}
+.parthold{
+	height: 100px;
+}
+.sidebar{
+	background-color: #55AD9B;
+	margin: 0;
+	padding: 0;
+	overflow-y:auto;
+	height:1000px;
+	width: 200px;
+	position:fixed;
+	height:100%;
+	z-index:1;
+}
+.sidepart{
+	text-align:center;
+	height:100%;
+	display:flex;
+	align-items:center;
+}
+h1.side{
+	font-size:20px;
+	margin:auto;
+}
+li.foot{
+	display: inline-block;
+	text-align: center;
+	width:calc((100% - 200px)/2);
+}
+ul.foot{
+	position:relative;
+	bottom:-15px;
+	padding-left:40px;
+	width:100%;
+}
+footer{
+	z-index: 0;
+	position:relative;
+	background-color: #40A578;
+	height: 50px;
+	width:100%
+}
+.foot a{
+	curser:pointer;
+}
+.start{
+	flex:4;
+	align-items: center;
+	height: 3000px;
+}
+.mainpart{
+	height: 100%;
+}
+.meds{
+	display: flex;
+	border: solid #B0EBB4;
+	font-size:20px;
+	font-family: Copperplate;
+}
+.addme{
+	display:block;
+	position:relative;
+	cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header id = "headerme">
+<!--hr color="#1A2130" width="210%"-->
+<div class="myheader">
+<img class="logo" src="logo.jpg" height="75px" width="100px">
+<div class="slogan">
+<h3>WITH MORE ADVANCED MEDICINE,<br>EXPECT LESS ILLNESS</h3>
+</div>
+<h3 class="login"><a href="login.html">LOG IN</a></h3>
+<h3 class="createacc"><a href="createAccount_page.html">Create Account</a></h3>
+</div>
+<!--hr color="#1A2130" width="210%"-->
+</header>
+<main id = "mainer">
+<div class="sidebar" id = "sidebar">
+<div class="parthold">
+	<div class="sidepart"><h1 class = "side"><a href="home_page.html">Home page</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Drug_list.html">Drug list</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Cart.html">Cart</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Pharmacist.html">Pharmacist</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Settings.html">Settings</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="faq_1.html">FAQ</a></h1></div>
+	</div>
+</div>
+<div class = "start" id = "start">
+	<div class = "mainpart">
+		<div class="meds">
+			<image src="med5.webp" width="250px" height="250px">
+			<p>Levothyroxine<br><br>
+			is a medicine used to
+			treat an underactive <br>
+			thyroid gland (hypothyroidism).<br> The thyroid gland makes thyroid 
+			hormones which help to<br> control energy levels 
+			and growth. Levothyroxine is taken to <br>replace the missing thyroid 
+			hormone thyroxine. Levothyroxine is<br> only 
+			available on prescription.<br><br>Price: RM7<br><br><button onclick = "addtocart('levothyroxine')" class = "addme">add to cart</button></p>
+		</div>
+		
+		<div class="meds">
+			<image src="med6.webp" width="250px" height="250px">
+			<p>Vitamin D<br><br>
+			 is a nutrient your body needs for building and maintaining<br> healthy bones. 
+			That's because your body can only <br>absorb calcium, the primary component of bone, 
+			when <br>vitamin D is present. Vitamin D also regulates many 
+			other<br> cellular functions in your body.<br><br>Price: RM7<br><br><button onclick = "addtocart('vitamin d')" class = "addme">add to cart</button></p>
+		</div>
+		<div class="meds">
+			<image src="med7.webp" width="250px" height="250px">
+			<p>Amoxicillin<br><br>
+			It is used to treat bacterial infections, such as chest infections<br>
+			(including pneumonia) and dental abscesses. It can also be used together<br>
+			with other antibiotics and medicines to treat stomach ulcers. It's often <br>
+			prescribed for children, to treat ear infections and chest infections.<br><br>Price: RM5
+			<br><br><button onclick = "addtocart('amoxicillin')" class = "addme">add to cart</button></p>
+		</div>
+		<div class="meds">
+			<image src="med8.webp" width="250px" height="250px">
+			<p>Lisinopril<br><br>
+			works by blocking a substance in the body that causes the blood <br>vessels 
+			to tighten. As a result, lisinopril relaxes the blood vessels. <br>This lowers 
+			blood pressure and increases the supply of blood and<br> oxygen to the heart. 
+			Lisinopril is also used to help treat heart failure.1 Apr 2024<br><br>Price: RM5
+			<br><br><button onclick = "addtocart('lisinopril')" class = "addme">add to cart</button></p>
+		</div>
+		<div class="meds">
+			<image src="med9.webp" width="250px" height="250px">
+			<p>dextroamphetamine<br><br>
+			is used to treat attention-deficit hyperactivity 
+			disorder (ADHD) <br>and narcolepsy (sleep disorder). 
+			It belongs to the group of<br> medicines 
+			called central nervous system (CNS) stimulants.<br><br>Price: RM10
+			<br><br><button onclick = "addtocart('dextroamphetamine')" class = "addme">add to cart</button></p>
+		</div>
+		<div class="meds">
+			<image src="med10.webp" width="250px" height="250px">
+			<p>Amlodipine<br><br>
+			is a calcium channel blocker. It works by affecting the movement <br>of calcium
+			into the cells of the heart and blood vessels. This relaxes<br> the blood vessels
+			and lowers blood pressure, and increases the supply<br>of blood and oxygen to the 
+			heart while reducing its workload.<br><br>Price: RM10
+			<br><br><button onclick = "addtocart('amlodipine')" class = "addme">add to cart</button></p>
+		</div>
+		<div class="meds">
+			<image src="med11.webp" width="250px" height="250px">
+			<p>Gabapentin<br><br>
+			 is used to treat epilepsy. It's also taken for nerve pain, which can be <br>caused
+			 by different conditions, including diabetes and shingles. <br>Nerve pain can also 
+			 happen after an injury. In epilepsy, it's thought<br> that gabapentin stops seizures 
+			 by reducing the abnormal electrical activity in the brain.<br><br>Price: RM8
+			 <br><br><button onclick = "addtocart('gabapentin')" class = "addme">add to cart</button></p>
+		</div>
+		<div class="meds">
+			<image src="med12.avif" width="250px" height="250px">
+			<p>Atorvastatin<br><br>
+			is used together with a proper diet to lower 
+			cholesterol <br>and triglyceride 
+			(fats) levels in the blood. This medicine may<br> 
+			help prevent medical problems 
+			(eg, chest pain, heart attack, or stroke) <br>that 
+			are caused by fats clogging the blood vessels.<br><br>Price: RM8
+			<br><br><button onclick = "addtocart('atorvastatin')" class = "addme" id = "test">add to cart</button></p>
+		</div>
+		<div class="meds">
+			<image src="med13.webp" width="250px" height="250px">
+			<p>Prednisone<br><br>
+			is a steroid medication that treats conditions like asthma, <br>allergic 
+			reactions, arthritis, inflammatory bowel disease and <br>adrenal, blood 
+			or bone marrow conditions. It decreases <br>inflammation, slows an overactive 
+			immune system or replaces cortisol.<br><br>Price: RM8
+			<br><br><button onclick = "addtocart('prednisone')" class = "addme">add to cart</button></p>
+		</div>
+		<div class="meds">
+			<image src="med14.Avif" width="250px" height="250px">
+			<p>Albuterol HFA<br><br>
+			is used to treat or prevent bronchospasm in patients with asthma,<br>
+			bronchitis, emphysema, and other lung diseases. It is also used 
+			to<br> prevent bronchospasm caused by exercise. Albuterol belongs to 
+			the<br> family of medicines known as adrenergic bronchodilators<br><br>Price: RM5
+			<br><br><button onclick = "addtocart('albuterol hfa')" class = "addme">add to cart</button></p>
+		</div>
+	</div>
+</div>
+</main>
+<footer id = "footer">
+<ul class = "foot">
+	<li class = "foot"><a href="certificate.html">Certificate</a></li>
+	<li class = "foot"><a href="about_us.html">About Us</a></li>
+</ul>
+</footer>
+<script>
+var headerh = document.getElementById("headerme").offsetHeight;
+var winh = window.innerHeight;
+var sideh = winh - headerh;
+var sidew = document.getElementById("sidebar").offsetWidth;
+document.getElementById("mainer").style.paddingTop = headerh + "px";
+document.getElementById("start").style.paddingLeft = sidew + "px";
+document.getElementById("sidebar").style.height = sideh + "px";
+document.getElementById("footer").style.paddingLeft = sidew + "px";
+function addtocart(item)
+{
+	if (localStorage.getItem(item) === null){
+		var temp = Number(prompt('number of product to add(can be changed at cart)'));
+		if (temp === 0 || temp !== temp){
+			alert('failed when adding to cart');
+		}
+		else{
+			localStorage.setItem(item, temp);
+			alert('successfully added to cart');
+		}
+	}
+	else{
+		alert('item already in cart, please proceed to cart to change quantity, (' + localStorage.getItem(item) + " added)");
+	}
+}
+</script>
+</body>
+</html>

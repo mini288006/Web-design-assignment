@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	background-color: #95D2B3;
+	margin:0;
+	max-width:100%;
+	overflow-x:hidden;
+}
+header {
+	width:100%;
+	z-index: 1000;
+	position:fixed;
+}
+.myheader{
+	width: 100%;
+	display:flex;
+	background-color: #CAF4FF;
+	border-top: solid;
+	border-bottom: solid;
+}
+.logo{
+	border-radius: 100px;
+}
+.slogan{
+	flex: 5;
+	text-align: center;
+	background-color: #91DDCF;
+	//border: 2px solid #CAF4FF;//
+	//border-radius: 10px;//
+	//border-width: medium;//
+	padding: 0px;
+	margin: 0px;
+}
+.login{
+	flex: 1;
+	text-align: center;
+	border: 2px solid #CAF4FF;
+	border-radius: 10px;	
+	padding: 20px;
+	margin: auto;
+}
+.createacc{
+	flex: 1;
+	text-align: center;
+	border: 2px solid #CAF4FF;
+	border-radius: 10px;
+	padding: 20px;
+	margin: auto;
+}
+main{
+	padding-top: 0;
+	width:100%;
+	display:flex;
+}
+a:link{
+	color: #0E46A3;
+}
+.parthold{
+	height: 100px;
+}
+.sidebar{
+	background-color: #55AD9B;
+	margin: 0;
+	padding: 0;
+	overflow-y:auto;
+	height:1000px;
+	width: 200px;
+	position:fixed;
+	height:100%;
+	z-index:1;
+}
+.sidepart{
+	text-align:center;
+	height:100%;
+	display:flex;
+	align-items:center;
+}
+h1.side{
+	font-size:20px;
+	margin:auto;
+}
+li.foot{
+	display: inline-block;
+	text-align: center;
+	width:calc(95%/3);
+}
+ul.foot{
+	position:relative;
+	bottom:-15px;
+	width:100%;
+}
+footer{
+	z-index: 0;
+	position:relative;
+	background-color: #40A578;
+	height: 50px;
+	width:100%
+}
+.foot a{
+	curser:pointer;
+}
+.dropdown{
+	position: relative;
+	top:-225;
+	left:350;
+	height: 0px;
+	width:500px;
+	display: none;
+	font-size: 20px;
+	color: #5C2FC2;
+}
+.start{
+	flex:4;
+	align-items: center;
+}
+.mainpart{
+	height: 100%;
+}
+.farms{
+	display: flex;
+	align-items: center;
+}
+.pic{
+	flex:1;
+}
+.pic img{
+	width: 200px;
+	padding: 50px;
+	padding-left: 75px;
+}
+.descript{
+	flex:3;
+	font-size:25px;
+}
+</style>
+</head>
+
+<body>
+
+<header id = "headerme">
+<!--hr color="#1A2130" width="210%"-->
+<div class="myheader">
+<img class="logo" src="logo.jpg" height="75px" width="100px">
+<div class="slogan">
+<h3>WITH MORE ADVANCED MEDICINE,<br>EXPECT LESS ILLNESS</h3>
+</div>
+<h3 class="login"><a href="login.html">LOG IN</a></h3>
+<h3 class="createacc"><a href="createAccount_page.html">Create Account</a></h3>
+</div>
+<!--hr color="#1A2130" width="210%"-->
+</header>
+<main id = "mainer">
+<div class="sidebar" id = "sidebar">
+<div class="parthold">
+	<div class="sidepart"><h1 class = "side"><a href="home_page.html">Home page</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Drug_list.html">Drug list</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Cart.html">Cart</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Pharmacist.html">Pharmacist</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="Settings.html">Settings</a></h1></div>
+	<div class="sidepart"><h1 class = "side"><a href="faq_1.html">FAQ</a></h1></div>
+	</div>
+</div>
+<div class = "start" id = "start">
+	<div class = "mainpart">
+		<div class = "farms">
+			<div class = "pic">
+			<img src = "farm1.jpg">
+			</div>
+			<div class = "descript">
+			<ul>
+				<li>Name: Jeff Bazos</li><br>
+				<li>Age: 30</li><br>
+				<li>Contact Number: 0123456789</li><br>
+				<li>Description: Graduated from Amazon Med school with a Bachelor
+				Degree in Pharmacy <br>and has very good knowledge in medicine and
+				when it should be used</li>
+			</ul>
+			</div>
+		</div>
+		<div class = "farms">
+			<div class = "pic">
+			<img src = "farm2.jpg">
+			</div>
+			<div class = "descript">
+			<ul>
+				<li>Name: Thila</li><br>
+				<li>Age: 38</li><br>
+				<li>Contact Number: 0129876543</li><br>
+				<li>Description: Graduated from 42 Med school with a Masters 
+				Degree in Pharmacy <br>and is always seeking new medicine for 
+				patients to ingest <br>
+				in order to make a hasty recovery</li>
+			</ul>
+			</div>
+		</div>
+		<div class = "farms">
+			<div class = "pic">
+			<img src = "farm3.jpg">
+			</div>
+			<div class = "descript">
+			<ul>
+				<li>Name: John Doe</li><br>
+				<li>Age: 43</li><br>
+				<li>Contact Number: 0128572646</li><br>
+				<li>Description: Graduated from Blank Med school with a 
+				Bachelor Degree in Pharmacy <br>and is friendly to all of 
+				his patients in order to allow patients <br>to comfortably 
+				approach him for medical advice</li>
+			</ul>
+			</div>
+		</div>
+		<div class = "farms">
+			<div class = "pic">
+			<img src = "farm4.jfif">
+			</div>
+			<div class = "descript">
+			<ul>
+				<li>Name: Samuel Jackson</li><br>
+				<li>Age: 35</li><br>
+				<li>Contact Number: 0136284637</li><br>
+				<li>Description: Graduated from Purple Med school with a 
+				Bachelor Degree in Pharmacy <br>and the tendency to be brutally 
+				honest about your current health condition and <br>direct ways to
+				make a recovery</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</main>
+<footer id = "footer">
+<ul class = "foot">
+	<li class = "foot" id = "foot"><a href="certificate.html">Certificate</a></li>
+	<li class = "foot" id = "foot"><a href="About_us.html">About Us</a></li>
+</ul>
+</footer>
+<script>
+var headerh = document.getElementById("headerme").offsetHeight;
+var winh = window.innerHeight;
+var winw = window.innerWidth;
+var sideh = winh - headerh;
+var sidew = document.getElementById("sidebar").offsetWidth;
+var footw = winw - sidew;
+document.getElementById("mainer").style.paddingTop = headerh + "px";
+document.getElementById("start").style.paddingLeft = sidew + "px";
+document.getElementById("sidebar").style.height = sideh + "px";
+document.getElementById("footer").style.paddingLeft = sidew + "px";
+document.getElementById("footer").style.width = footw + "px";
+</script>
+</body>
+</html>
